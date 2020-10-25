@@ -32,20 +32,7 @@ module.exports.get = ((req, res)=>{
 
 module.exports.postCreate = ((req, res) =>{
     req.body.id = uuidv4();
-    const errors = [];
-    if(!req.body.name){
-        errors.push('Name is required.');
-    }
-    if(!req.body.phone){
-        errors.push('Phone is required.');
-    }
-    if(errors.length){//falesy
-        res.render('users/create',{ 
-            errors,
-            values: req.body 
-        });
-        return;
-    }
+    console.log(res.locals);
     db.get('users').push(req.body).write();
     // console.log(req.body)
     res.redirect('/users')
