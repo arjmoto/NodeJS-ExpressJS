@@ -8,9 +8,15 @@ html
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarNavAltMarkup.collapse.navbar-collapse
-                .navbar-nav
-                a.nav-item.nav-link.active(href='/') Home
-                a.nav-item.nav-link(href='/users') Users
-                a.nav-item.nav-link(href='/auth/login') Login
+                ul.navbar-nav
+                    li.a.nav-item
+                        a.nav-link.active(href='/') Home
+                    li.a.nav-item
+                        a.nav-link(href='/users') Users
+                    li.a.nav-item
+                        a.nav-link(href='/auth/login') Login
+
+            if user
+                p= user.name
         .container.pt-5
             block content
