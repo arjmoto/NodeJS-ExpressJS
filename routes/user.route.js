@@ -6,14 +6,10 @@ const router = express.Router();
 // const db = require('../db');
 const validate = require('../validate/user.validate')
 const controller = require('../controllers/user.controller');
-// const authMiddleware = require('../middlewares/auth.middleware');
+const authMiddleware = require('../middlewares/auth.middleware');
 
-// router.get('/',authMiddleware.requireAuth, controller.index)
-router.get('/', controller.index)
-router.get('/cookie', (req, res, next) =>{
-    res.cookie('user-id', 12314);
-    res.send('hello')
-})
+router.get('/',authMiddleware.requireAuth, controller.index)
+
 router.get('/search',controller.search)
 
 router.get('/create', controller.create)

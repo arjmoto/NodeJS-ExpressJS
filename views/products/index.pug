@@ -1,0 +1,39 @@
+extends ../layouts/common
+
+block content
+    h1 
+        span.mr-3 Products
+    form(action="/products/search", method = "GET", class="d-flex")
+        input(type="text", name="q", class="form-control")
+        button(class="btn btn-primary ml-2") Search
+    .row
+        .col-md-4
+            .card.mb-4.box-shadow
+            img.card-img-top(src='https://loremflickr.com/320/240/dog', alt='Card image cap')
+            .card-body
+                p.card-text
+                | This is a wider card with supporting text below as a natural lead-in to additional
+                | content. This content is a little bit longer.
+                .d-flex.justify-content-between.align-items-center
+                .btn-group
+                    button.btn.btn-primary.align-items-center(type='button') View
+        .col-md-4
+            .card.mb-4.box-shadow
+            img.card-img-top(src='https://loremflickr.com/320/240/dog', alt='Card image cap')
+            .card-body
+                p.card-text
+                | This is a wider card with supporting text below as a natural lead-in to additional
+                | content. This content is a little bit longer.
+                .d-flex.justify-content-between.align-items-center
+                .btn-group
+                    button.btn.btn-primary.align-items-center(type='button') View
+        .col-md-4
+            .card.mb-4.box-shadow
+            img.card-img-top(src='https://loremflickr.com/320/240/dog', alt='Card image cap')
+            .card-body
+                p.card-text
+                | This is a wider card with supporting text below as a natural lead-in to additional
+                | content. This content is a little bit longer.
+                .d-flex.justify-content-between.align-items-center
+                .btn-group
+                    button.btn.btn-primary.align-items-center(type='button') View
