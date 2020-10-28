@@ -24,7 +24,6 @@ module.exports.create = ((req, res) => {
 
 module.exports.get = ((req, res)=>{
     const id = req.params.id;
-    // console.log(id);
     const user = db.get('users').find({ id }).value();
     res.render('users/view', {
         user
@@ -33,7 +32,8 @@ module.exports.get = ((req, res)=>{
 
 module.exports.postCreate = ((req, res) =>{
     req.body.id = uuidv4();
-    console.log(res.locals);
+    // console.log(res.locals);
+    req.body.avatar = req.file.path.split('\\').slice(1).join('/');
     db.get('users').push(req.body).write();
     // console.log(req.body)
     res.redirect('/users')
