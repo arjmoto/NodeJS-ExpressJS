@@ -23,6 +23,8 @@ app.use('/users',authMiddleware.requireAuth, userRoutes);
 app.use('/products',productRoutes);
 app.use('/auth', authRoutes);
 
+
+
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`)
 })
