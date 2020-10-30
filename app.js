@@ -30,7 +30,7 @@ app.use("/users", authMiddleware.requireAuth, userRoutes);
 app.use("/products", productRoutes);
 app.use("/auth", authRoutes);
 app.use("/cart", cartRoute);
-app.use("/transfer", transferRoute);
+app.use("/transfer", authMiddleware.requireAuth, transferRoute);
 app.use("/api/products", apiProductRoute);
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
