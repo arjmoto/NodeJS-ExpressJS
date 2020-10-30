@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon --inspect app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"controllers/**/*.js\" \"middlewares/**/*.js\" \"routes/**/*.js\" \"validate/**/*.js\" \"app.js\" \"db.js\" \"models/**/*.js\""
+    "format": "prettier --write \"controllers/**/*.js\" \"middlewares/**/*.js\" \"routes/**/*.js\" \"validate/**/*.js\" \"app.js\" \"db.js\" \"models/**/*.js\" \"api/**/*.js\""
   },
   "author": "",
   "license": "ISC",
