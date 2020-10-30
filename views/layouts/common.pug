@@ -16,6 +16,10 @@ html
                     li.a.nav-item
                         a.nav-link(href='/Products') Products
                     li.a.nav-item
+                        a.nav-link(href='/Cart') Cart
+                        if totalCount
+                            p= totalCount
+                    li.a.nav-item
                         a.nav-link(href='/auth/login') Login
 
             if user
